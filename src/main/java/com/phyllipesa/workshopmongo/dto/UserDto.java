@@ -11,4 +11,12 @@ public record UserDto(String id, String name, String email) {
         user.getEmail()
     );
   }
+
+  public static User fromDto(UserDto userDto) {
+    return new User(
+      userDto.id,
+      userDto.name,
+      userDto.email
+    );
+  }
 }
