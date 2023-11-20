@@ -1,5 +1,6 @@
 package com.phyllipesa.workshopmongo.domain.resources;
 
+import com.phyllipesa.workshopmongo.domain.entities.Post;
 import com.phyllipesa.workshopmongo.domain.entities.User;
 import com.phyllipesa.workshopmongo.domain.services.UserService;
 import com.phyllipesa.workshopmongo.dto.UserDto;
@@ -53,5 +54,11 @@ public class UserResource {
     user.setId(id);
     userService.update(user);
     return ResponseEntity.noContent().build();
+  }
+
+  @GetMapping("/{id}/posts")
+  public ResponseEntity<List<Post>> findPosts(@PathVariable String id) {
+    User user = userService.findById(id);
+    return ResponseEntity.ok().body(user.getPosts());
   }
 }
