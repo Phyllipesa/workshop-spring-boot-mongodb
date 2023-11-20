@@ -14,7 +14,7 @@ public record UserDto(String id, String name, String email) {
 
   public static User fromDto(UserDto userDto) {
     return new User(
-      userDto.id,
+      null,
       userDto.name,
       userDto.email
     );
