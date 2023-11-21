@@ -10,6 +10,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Representa um post em um sistema de blog.
+ */
 @Document
 public class Post {
 
@@ -25,6 +28,15 @@ public class Post {
   public Post() {
   }
 
+  /**
+   * Construtor para criar um novo post com informações específicas.
+   *
+   * @param id     Identificador único do post.
+   * @param date   Data de publicação do post.
+   * @param title  Título do post.
+   * @param body   Corpo ou conteúdo do post.
+   * @param author Autor do post representado como um objeto AuthorDto.
+   */
   public Post(String id, Date date, String title, String body, AuthorDto author) {
     this.id = id;
     this.date = date;

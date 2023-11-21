@@ -1,5 +1,8 @@
 package com.phyllipesa.workshopmongo.domain.resources.exception;
 
+/**
+ * Classe que representa uma estrutura padrão para mensagens de erro em respostas HTTP.
+ */
 public class StandardError {
 
   private Long timestamp;
@@ -11,6 +14,15 @@ public class StandardError {
   public StandardError() {
   }
 
+  /**
+   * Construtor para criar uma instância de StandardError com informações específicas.
+   *
+   * @param timestamp Horário em que o erro ocorreu.
+   * @param status    Código de status HTTP representando o tipo de erro.
+   * @param error     Descrição do tipo de erro.
+   * @param message   Mensagem detalhada sobre o erro.
+   * @param path      Caminho do URI que causou o erro.
+   */
   public StandardError(Long timestamp, Integer status, String error, String message, String path) {
     this.timestamp = timestamp;
     this.status = status;

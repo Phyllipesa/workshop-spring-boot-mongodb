@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Representa um usuário em um sistema.
+ */
 @Document
 public class User {
 
@@ -22,6 +25,13 @@ public class User {
   public User() {
   }
 
+  /**
+   * Construtor para criar um novo usuário com informações específicas.
+   *
+   * @param id    Identificador único do usuário.
+   * @param name  Nome do usuário.
+   * @param email Endereço de e-mail do usuário.
+   */
   public User(String id, String name, String email) {
     this.id = id;
     this.name = name;
